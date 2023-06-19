@@ -1,0 +1,23 @@
+uuid: 968c4ad1-42df-46af-b3a1-ccf9b7733470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.appliances
+id: node.appliances.field_price
+field_name: field_price
+entity_type: node
+bundle: appliances
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '₹ '
+  suffix: ''
+field_type: decimal

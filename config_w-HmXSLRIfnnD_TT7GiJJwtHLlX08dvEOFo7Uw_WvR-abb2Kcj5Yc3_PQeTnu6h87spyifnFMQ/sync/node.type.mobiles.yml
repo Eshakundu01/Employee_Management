@@ -1,0 +1,18 @@
+uuid: 9ad0ba71-4f65-4567-94e3-c2730c738b93
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Mobiles
+type: mobiles
+description: 'All mobiles items are listed here.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

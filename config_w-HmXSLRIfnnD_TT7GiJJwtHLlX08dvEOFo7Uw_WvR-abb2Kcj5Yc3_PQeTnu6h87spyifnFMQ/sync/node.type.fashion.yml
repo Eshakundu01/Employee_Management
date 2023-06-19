@@ -1,0 +1,18 @@
+uuid: 06b51541-64a0-401b-89b3-c43cd1304c83
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Fashion
+type: fashion
+description: 'All fashion items are listed here.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

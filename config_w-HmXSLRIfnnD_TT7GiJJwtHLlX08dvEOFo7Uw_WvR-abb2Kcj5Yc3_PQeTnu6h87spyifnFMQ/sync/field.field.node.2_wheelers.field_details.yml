@@ -1,0 +1,21 @@
+uuid: fd9408a0-93e7-4b04-a964-838ab32a17b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.2_wheelers
+  module:
+    - text
+id: node.2_wheelers.field_details
+field_name: field_details
+entity_type: node
+bundle: 2_wheelers
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

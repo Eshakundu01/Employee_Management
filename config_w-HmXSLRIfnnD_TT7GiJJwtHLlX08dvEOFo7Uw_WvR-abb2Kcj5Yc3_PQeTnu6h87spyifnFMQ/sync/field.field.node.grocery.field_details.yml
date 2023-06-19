@@ -1,0 +1,21 @@
+uuid: 42901d2f-02af-4bcf-883b-36a650fb38c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.grocery
+  module:
+    - text
+id: node.grocery.field_details
+field_name: field_details
+entity_type: node
+bundle: grocery
+label: Details
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

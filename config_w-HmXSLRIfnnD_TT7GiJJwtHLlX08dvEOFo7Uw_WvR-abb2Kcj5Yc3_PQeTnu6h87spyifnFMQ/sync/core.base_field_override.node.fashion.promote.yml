@@ -1,0 +1,22 @@
+uuid: 9795a1d0-202b-4d19-b754-e9f5707534a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fashion
+id: node.fashion.promote
+field_name: promote
+entity_type: node
+bundle: fashion
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

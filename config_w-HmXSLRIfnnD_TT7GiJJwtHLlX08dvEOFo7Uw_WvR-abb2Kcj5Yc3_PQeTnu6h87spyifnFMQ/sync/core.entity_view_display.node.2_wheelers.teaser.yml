@@ -1,0 +1,138 @@
+uuid: ced98380-3e1b-443a-a98c-58aecf61ee45
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.2_wheelers.field_details
+    - field.field.node.2_wheelers.field_photo
+    - field.field.node.2_wheelers.field_price
+    - image.style.thumbnail
+    - node.type.2_wheelers
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          619ccd0a-7dd8-4608-9e13-76f18c3d0b6a:
+            uuid: 619ccd0a-7dd8-4608-9e13-76f18c3d0b6a
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_photo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          c6a76c7a-7128-4f16-b6f8-e3ac21fcd8d8:
+            uuid: c6a76c7a-7128-4f16-b6f8-e3ac21fcd8d8
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_trimmed
+                label: visually_hidden
+                settings:
+                  trim_length: 150
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d7c3f78c-aae8-4bfb-a776-f4f131a17833:
+            uuid: d7c3f78c-aae8-4bfb-a776-f4f131a17833
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_price'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d3ae6ccc-86ac-4927-aa0e-8cf92ffa51e0:
+            uuid: d3ae6ccc-86ac-4927-aa0e-8cf92ffa51e0
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.2_wheelers.teaser
+targetEntityType: node
+bundle: 2_wheelers
+mode: teaser
+content:
+  field_details:
+    type: text_trimmed
+    label: visually_hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_photo:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  links: true

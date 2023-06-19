@@ -1,0 +1,144 @@
+uuid: 0c9ed928-86ea-4609-9789-92e39314edb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.mobiles.field_details
+    - field.field.node.mobiles.field_photo
+    - field.field.node.mobiles.field_price
+    - node.type.mobiles
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          f82d44c2-7264-4fa7-9fe9-fcf99218c531:
+            uuid: f82d44c2-7264-4fa7-9fe9-fcf99218c531
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          af7279e8-4194-4790-be8f-044617faf245:
+            uuid: af7279e8-4194-4790-be8f-044617faf245
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          45fb378f-8255-40fd-b843-2f1024b311af:
+            uuid: 45fb378f-8255-40fd-b843-2f1024b311af
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          e21f2c41-4a0a-49a1-8a34-1f66d5f06cf3:
+            uuid: e21f2c41-4a0a-49a1-8a34-1f66d5f06cf3
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.mobiles.default
+targetEntityType: node
+bundle: mobiles
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

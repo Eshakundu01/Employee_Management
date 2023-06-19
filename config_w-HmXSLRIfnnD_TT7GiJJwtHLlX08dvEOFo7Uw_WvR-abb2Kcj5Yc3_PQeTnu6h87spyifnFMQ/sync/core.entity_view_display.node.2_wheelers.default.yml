@@ -1,0 +1,137 @@
+uuid: 8646323d-7d39-4d7b-9e71-204ee5041c9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.2_wheelers.field_details
+    - field.field.node.2_wheelers.field_photo
+    - field.field.node.2_wheelers.field_price
+    - node.type.2_wheelers
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8d08eebc-f910-4cb8-a63b-cb825a29ecfb:
+            uuid: 8d08eebc-f910-4cb8-a63b-cb825a29ecfb
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          33537004-1526-49c2-adfb-bbc7da579070:
+            uuid: 33537004-1526-49c2-adfb-bbc7da579070
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_price'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a79ae9e5-d6f8-45ba-b3a5-66738dd4e4e2:
+            uuid: a79ae9e5-d6f8-45ba-b3a5-66738dd4e4e2
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d521a95e-b5f8-4672-bc91-51e7e518f5c8:
+            uuid: d521a95e-b5f8-4672-bc91-51e7e518f5c8
+            region: content
+            configuration:
+              id: 'field_block:node:2_wheelers:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.2_wheelers.default
+targetEntityType: node
+bundle: 2_wheelers
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_photo:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_price:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  links: true

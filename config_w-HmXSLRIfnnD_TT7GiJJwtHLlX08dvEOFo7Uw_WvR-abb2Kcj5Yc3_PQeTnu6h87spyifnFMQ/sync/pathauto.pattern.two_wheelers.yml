@@ -1,0 +1,22 @@
+uuid: 14fd5c08-61f1-4afd-8088-47fd84ae7819
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: two_wheelers
+label: 'Two wheelers'
+type: 'canonical_entities:node'
+pattern: 'two-wheelers/[node:title]'
+selection_criteria:
+  8470ffb3-c21c-4a6a-bd40-19eb60030697:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8470ffb3-c21c-4a6a-bd40-19eb60030697
+    context_mapping:
+      node: node
+    bundles:
+      2_wheelers: 2_wheelers
+selection_logic: and
+weight: -5
+relationships: {  }
