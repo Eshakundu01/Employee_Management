@@ -1,0 +1,121 @@
+uuid: da15aca4-d702-4e61-8a12-54d9e796b282
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.grocery.field_details
+    - field.field.node.grocery.field_photo
+    - field.field.node.grocery.field_price
+    - node.type.grocery
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          49d422d0-53aa-4b97-852b-578d7f4756bc:
+            uuid: 49d422d0-53aa-4b97-852b-578d7f4756bc
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          1325202d-7085-4543-b19f-29b61f64f147:
+            uuid: 1325202d-7085-4543-b19f-29b61f64f147
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          f238fb04-5db6-416d-b119-a27f425b429d:
+            uuid: f238fb04-5db6-416d-b119-a27f425b429d
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_details'
+              label: Details
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: visually_hidden
+                settings:
+                  trim_length: 150
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          f0385b80-e4b7-472c-964b-f38ff26d3571:
+            uuid: f0385b80-e4b7-472c-964b-f38ff26d3571
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.grocery.teaser
+targetEntityType: node
+bundle: grocery
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_details: true
+  field_photo: true
+  field_price: true

@@ -1,0 +1,21 @@
+uuid: a4ce10c5-2d71-4b93-b85f-3f8a7b4c93e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.mobiles
+  module:
+    - text
+id: node.mobiles.field_details
+field_name: field_details
+entity_type: node
+bundle: mobiles
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

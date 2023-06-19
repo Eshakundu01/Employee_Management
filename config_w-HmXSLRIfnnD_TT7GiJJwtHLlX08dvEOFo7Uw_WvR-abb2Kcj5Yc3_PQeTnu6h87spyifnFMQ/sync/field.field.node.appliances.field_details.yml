@@ -1,0 +1,21 @@
+uuid: 6d851056-cb21-4bbd-b146-1b36f00588c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.appliances
+  module:
+    - text
+id: node.appliances.field_details
+field_name: field_details
+entity_type: node
+bundle: appliances
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

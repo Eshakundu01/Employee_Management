@@ -1,0 +1,144 @@
+uuid: afe61e3f-edb6-48ec-814a-eb272f2ba061
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.electronics.field_details
+    - field.field.node.electronics.field_photo
+    - field.field.node.electronics.field_price
+    - node.type.electronics
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          3418d02a-fba2-4aae-963d-c6f3b8275c47:
+            uuid: 3418d02a-fba2-4aae-963d-c6f3b8275c47
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_details'
+              label: Details
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          b038eeae-38f2-4395-82bd-f242f0de296e:
+            uuid: b038eeae-38f2-4395-82bd-f242f0de296e
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_photo'
+              label: EPhoto
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          7b5e3172-139f-48f3-bbfb-37c3e31dc1f2:
+            uuid: 7b5e3172-139f-48f3-bbfb-37c3e31dc1f2
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_price'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: above
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          3f5ffbed-1008-4f4f-9135-2934bbac820c:
+            uuid: 3f5ffbed-1008-4f4f-9135-2934bbac820c
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.electronics.default
+targetEntityType: node
+bundle: electronics
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

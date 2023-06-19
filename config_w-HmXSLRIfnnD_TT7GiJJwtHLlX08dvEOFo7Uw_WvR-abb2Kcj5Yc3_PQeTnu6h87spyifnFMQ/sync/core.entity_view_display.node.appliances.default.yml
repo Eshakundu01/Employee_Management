@@ -1,0 +1,141 @@
+uuid: cb5436a8-e444-41c1-be04-2d6b4cbcf15d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.appliances.field_details
+    - field.field.node.appliances.field_photo
+    - field.field.node.appliances.field_price
+    - node.type.appliances
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1b6a9278-f1ad-4e79-89c6-ba57c3528afc:
+            uuid: 1b6a9278-f1ad-4e79-89c6-ba57c3528afc
+            region: content
+            configuration:
+              id: 'field_block:node:appliances:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          9f20a32e-2444-4560-a0eb-69c37fd7c1ad:
+            uuid: 9f20a32e-2444-4560-a0eb-69c37fd7c1ad
+            region: content
+            configuration:
+              id: 'field_block:node:appliances:field_price'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_decimal
+                label: above
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          afa37895-1f75-4548-9a8a-cb23115bdb86:
+            uuid: afa37895-1f75-4548-9a8a-cb23115bdb86
+            region: content
+            configuration:
+              id: 'field_block:node:appliances:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          a6f124d0-07fb-45a2-b6a7-79333f4307e9:
+            uuid: a6f124d0-07fb-45a2-b6a7-79333f4307e9
+            region: content
+            configuration:
+              id: 'field_block:node:appliances:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.appliances.default
+targetEntityType: node
+bundle: appliances
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

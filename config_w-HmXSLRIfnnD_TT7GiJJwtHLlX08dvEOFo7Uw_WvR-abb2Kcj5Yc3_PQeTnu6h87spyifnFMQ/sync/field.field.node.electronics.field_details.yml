@@ -1,0 +1,21 @@
+uuid: af91f2ba-1bd5-40c8-bca1-4a5a5acafd83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_details
+    - node.type.electronics
+  module:
+    - text
+id: node.electronics.field_details
+field_name: field_details
+entity_type: node
+bundle: electronics
+label: Details
+description: E_
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

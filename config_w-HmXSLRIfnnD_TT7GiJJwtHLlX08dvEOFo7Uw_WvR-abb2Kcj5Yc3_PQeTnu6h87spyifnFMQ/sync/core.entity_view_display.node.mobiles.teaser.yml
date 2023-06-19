@@ -1,0 +1,121 @@
+uuid: 9455fb93-e959-4717-9f37-80946c4491ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.mobiles.field_details
+    - field.field.node.mobiles.field_photo
+    - field.field.node.mobiles.field_price
+    - node.type.mobiles
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          57469bf3-29a7-4e51-8346-0d9f149fa21c:
+            uuid: 57469bf3-29a7-4e51-8346-0d9f149fa21c
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          21d40526-1eea-4d08-a6d3-571a42f9121b:
+            uuid: 21d40526-1eea-4d08-a6d3-571a42f9121b
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          233cc710-ff74-4cb4-92de-150aa4b3dcc9:
+            uuid: 233cc710-ff74-4cb4-92de-150aa4b3dcc9
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_details'
+              label: Details
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: visually_hidden
+                settings:
+                  trim_length: 150
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          a7557518-096b-4bb2-8f50-523053cbee09:
+            uuid: a7557518-096b-4bb2-8f50-523053cbee09
+            region: content
+            configuration:
+              id: 'field_block:node:mobiles:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.mobiles.teaser
+targetEntityType: node
+bundle: mobiles
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_details: true
+  field_photo: true
+  field_price: true

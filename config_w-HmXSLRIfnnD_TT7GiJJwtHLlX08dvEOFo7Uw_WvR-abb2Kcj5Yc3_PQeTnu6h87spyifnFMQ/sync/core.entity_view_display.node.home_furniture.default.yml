@@ -1,0 +1,144 @@
+uuid: d4daf55e-b907-4a49-8990-caf0bae99300
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home_furniture.field_details
+    - field.field.node.home_furniture.field_photo
+    - field.field.node.home_furniture.field_price
+    - node.type.home_furniture
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          35a8db1b-d2ea-40cc-b315-decadcd72fd2:
+            uuid: 35a8db1b-d2ea-40cc-b315-decadcd72fd2
+            region: content
+            configuration:
+              id: 'field_block:node:home_furniture:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          f57350f5-c039-45a5-a245-8a84caea5c29:
+            uuid: f57350f5-c039-45a5-a245-8a84caea5c29
+            region: content
+            configuration:
+              id: 'field_block:node:home_furniture:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d8edca1e-c268-452b-83a2-6fadcce6ffa2:
+            uuid: d8edca1e-c268-452b-83a2-6fadcce6ffa2
+            region: content
+            configuration:
+              id: 'field_block:node:home_furniture:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          e51e05b5-aa20-444f-994a-4421e9ab3987:
+            uuid: e51e05b5-aa20-444f-994a-4421e9ab3987
+            region: content
+            configuration:
+              id: 'field_block:node:home_furniture:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.home_furniture.default
+targetEntityType: node
+bundle: home_furniture
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

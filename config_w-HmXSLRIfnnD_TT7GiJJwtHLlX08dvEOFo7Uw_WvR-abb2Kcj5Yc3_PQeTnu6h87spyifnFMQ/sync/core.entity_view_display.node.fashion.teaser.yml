@@ -1,0 +1,121 @@
+uuid: f16a5691-d32c-4280-99ab-f5ada8d000c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fashion.field_details
+    - field.field.node.fashion.field_photo
+    - field.field.node.fashion.field_price
+    - node.type.fashion
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          8a6ab298-b514-4267-87f7-7a63cd555b1d:
+            uuid: 8a6ab298-b514-4267-87f7-7a63cd555b1d
+            region: content
+            configuration:
+              id: 'field_block:node:fashion:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          4312a9f1-ceda-481e-bcfa-e90a78114841:
+            uuid: 4312a9f1-ceda-481e-bcfa-e90a78114841
+            region: content
+            configuration:
+              id: 'field_block:node:fashion:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          7cce8acb-66f2-43f1-832d-85f37d6e029a:
+            uuid: 7cce8acb-66f2-43f1-832d-85f37d6e029a
+            region: content
+            configuration:
+              id: 'field_block:node:fashion:field_details'
+              label: Details
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: visually_hidden
+                settings:
+                  trim_length: 150
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          2a26185e-28bb-4294-92cf-e39366ac6dae:
+            uuid: 2a26185e-28bb-4294-92cf-e39366ac6dae
+            region: content
+            configuration:
+              id: 'field_block:node:fashion:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.fashion.teaser
+targetEntityType: node
+bundle: fashion
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_details: true
+  field_photo: true
+  field_price: true

@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: aabd6182-e024-44f3-93e0-b179d8f388f9
+name: 'Local Employee Management Portal'
+mail: esha.kundu@innoraft.com
+slogan: ''
+page:
+  403: /node/19
+  404: /node/20
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

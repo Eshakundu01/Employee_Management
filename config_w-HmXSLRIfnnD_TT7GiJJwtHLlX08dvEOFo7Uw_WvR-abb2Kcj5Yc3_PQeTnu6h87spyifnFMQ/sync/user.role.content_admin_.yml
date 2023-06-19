@@ -1,0 +1,27 @@
+uuid: bd195c89-d5d5-4664-a4bd-be6d5985f9a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.fashion
+    - node.type.home_furniture
+    - node.type.mobiles
+  module:
+    - contextual
+    - filter
+    - node
+    - toolbar
+    - tour
+id: content_admin_
+label: 'Content admin 2'
+weight: 5
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create fashion content'
+  - 'create home_furniture content'
+  - 'create mobiles content'
+  - 'use text format full_html'

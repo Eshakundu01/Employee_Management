@@ -1,0 +1,22 @@
+uuid: 6ad3cd49-02a4-4333-ba74-f8b296ca532f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: applicances
+label: Applicances
+type: 'canonical_entities:node'
+pattern: 'applicances/[node:title]'
+selection_criteria:
+  28b23b44-d499-4266-8092-9494f0d5d564:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 28b23b44-d499-4266-8092-9494f0d5d564
+    context_mapping:
+      node: node
+    bundles:
+      appliances: appliances
+selection_logic: and
+weight: 0
+relationships: {  }

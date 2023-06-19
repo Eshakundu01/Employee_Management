@@ -1,0 +1,121 @@
+uuid: 9829eb9f-7bc8-49e3-97ab-bdfaee7029da
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.electronics.field_details
+    - field.field.node.electronics.field_photo
+    - field.field.node.electronics.field_price
+    - node.type.electronics
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6779d5db-3160-47d6-a3f8-58ae189d01ad:
+            uuid: 6779d5db-3160-47d6-a3f8-58ae189d01ad
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          d07d23cd-5425-4c1b-bd4a-3107a2198dce:
+            uuid: d07d23cd-5425-4c1b-bd4a-3107a2198dce
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_photo'
+              label: EPhoto
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          23c1811f-edfc-492e-9271-f060cc9d65e0:
+            uuid: 23c1811f-edfc-492e-9271-f060cc9d65e0
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_details'
+              label: E_Details
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: visually_hidden
+                settings:
+                  trim_length: 150
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          86fce5cb-9386-44de-a2ce-bcf0a3faebfc:
+            uuid: 86fce5cb-9386-44de-a2ce-bcf0a3faebfc
+            region: content
+            configuration:
+              id: 'field_block:node:electronics:field_price'
+              label: EPrice
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.electronics.teaser
+targetEntityType: node
+bundle: electronics
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_details: true
+  field_photo: true
+  field_price: true

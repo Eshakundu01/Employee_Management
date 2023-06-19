@@ -1,0 +1,27 @@
+uuid: 7fac6ee1-84af-4a87-a938-a2c50db6dd37
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.appliances
+    - node.type.electronics
+    - node.type.grocery
+  module:
+    - contextual
+    - filter
+    - node
+    - toolbar
+    - tour
+id: content_admin_1
+label: 'Content admin 1'
+weight: 4
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'access tour'
+  - 'create appliances content'
+  - 'create electronics content'
+  - 'create grocery content'
+  - 'use text format full_html'

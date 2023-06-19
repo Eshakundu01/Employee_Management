@@ -1,0 +1,144 @@
+uuid: bc4d7559-0068-43b7-8c90-0cb87d893340
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grocery.field_details
+    - field.field.node.grocery.field_photo
+    - field.field.node.grocery.field_price
+    - node.type.grocery
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          2d98437b-4fb5-46e4-bac6-20073710d48c:
+            uuid: 2d98437b-4fb5-46e4-bac6-20073710d48c
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_photo'
+              label: Photo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_link: ''
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          b197d015-7ff1-4866-bf53-33d4cf1dc321:
+            uuid: b197d015-7ff1-4866-bf53-33d4cf1dc321
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_details'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d4ff9e82-fa51-4b20-8b4d-d34ecfc760fa:
+            uuid: d4ff9e82-fa51-4b20-8b4d-d34ecfc760fa
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:field_price'
+              label: Price
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: number_decimal
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  decimal_separator: .
+                  scale: 2
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9c1be6fc-33c9-4b47-b397-03d89db12f28:
+            uuid: 9c1be6fc-33c9-4b47-b397-03d89db12f28
+            region: content
+            configuration:
+              id: 'field_block:node:grocery:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: visually_hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+        third_party_settings: {  }
+id: node.grocery.default
+targetEntityType: node
+bundle: grocery
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_price:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

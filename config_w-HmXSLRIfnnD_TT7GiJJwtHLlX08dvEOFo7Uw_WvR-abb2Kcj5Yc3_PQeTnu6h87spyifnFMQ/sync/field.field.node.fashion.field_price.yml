@@ -1,0 +1,23 @@
+uuid: 7980ca4d-40c5-406a-8b32-941f80faeb79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.fashion
+id: node.fashion.field_price
+field_name: field_price
+entity_type: node
+bundle: fashion
+label: Price
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: '₹ '
+  suffix: ''
+field_type: decimal
